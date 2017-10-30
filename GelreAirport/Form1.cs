@@ -16,5 +16,26 @@ namespace GelreAirport
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lbBalies.Items.Add("Balie A");
+            lbBalies.Items.Add("Balie B");
+            lbBalies.Items.Add("Balie C");
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            if (lbBalies.SelectedIndex >= 0)
+            {
+                MessageBox.Show(lbBalies.SelectedItem.ToString());
+
+            }
+            else
+            {
+                MessageBox.Show("Selecteer aub een balie.", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+            }
+        }
     }
 }
