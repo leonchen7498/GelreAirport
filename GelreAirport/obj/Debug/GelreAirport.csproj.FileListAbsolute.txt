@@ -11,3 +11,4 @@ C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.exe
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.pdb
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.ZoekenPassagierWindow.resources
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.BalieWindow.resources
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.View.DetailedPassagierVluchtWindow.resources
