@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BalieWindow.cs">
+    <Compile Include="View\BalieWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BalieWindow.Designer.cs">
+    <Compile Include="View\BalieWindow.Designer.cs">
       <DependentUpon>BalieWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -60,7 +60,7 @@
     <Compile Include="View\ZoekenPassagierWindow.Designer.cs">
       <DependentUpon>ZoekenPassagierWindow.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BalieWindow.resx">
+    <EmbeddedResource Include="View\BalieWindow.resx">
       <DependentUpon>BalieWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
