@@ -19,6 +19,7 @@ namespace GelreAirport
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             lbBalies.Items.Add("Balie A");
             lbBalies.Items.Add("Balie B");
             lbBalies.Items.Add("Balie C");
@@ -28,8 +29,9 @@ namespace GelreAirport
         {
             if (lbBalies.SelectedIndex >= 0)
             {
-                MessageBox.Show(lbBalies.SelectedItem.ToString());
-
+                this.Hide();
+                ZoekenPassagierWindow window = new ZoekenPassagierWindow();
+                window.Show();
             }
             else
             {

@@ -65,7 +65,7 @@
             this.lbBalies.Size = new System.Drawing.Size(658, 326);
             this.lbBalies.TabIndex = 3;
             // 
-            // Form1
+            // BalieWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.lbBalies);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConfirm);
-            this.Name = "Form1";
+            this.Name = "BalieWindow";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
