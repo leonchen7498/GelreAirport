@@ -16,5 +16,10 @@ namespace GelreAirport
         {
             InitializeComponent();
         }
+
+        private void ZoekenPassagierWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

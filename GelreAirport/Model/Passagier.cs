@@ -15,22 +15,22 @@ namespace GelreAirport.Model
 
         public int Nummer
         {
-            get => nummer;
+            get { return nummer; }
         }
 
         public string Naam
         {
-            get => naam;
+            get { return naam; }
         }
 
         public char Geslacht
         {
-            get => geslacht;
+            get { return geslacht; }
         }
 
         public DateTime Geboortedatum
         {
-            get => geboortedatum;
+            get { return geboortedatum; }
         }
 
         public Passagier(int nummer, string naam, char geslacht, DateTime geboortedatum)
