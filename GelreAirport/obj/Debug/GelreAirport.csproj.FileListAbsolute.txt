@@ -4,10 +4,10 @@ C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\GelreAirport.exe
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\GelreAirport.exe
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\GelreAirport.pdb
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csprojResolveAssemblyReference.cache
-C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.Form1.resources
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.Properties.Resources.resources
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csproj.GenerateResource.Cache
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csproj.CoreCompileInputs.cache
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.exe
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.pdb
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.ZoekenPassagierWindow.resources
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.BalieWindow.resources
