@@ -1,6 +1,6 @@
 ﻿namespace GelreAirport
 {
-    partial class Form1
+    partial class BalieWindow
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GelreAirport
 {
-    public partial class Form1 : Form
+    public partial class BalieWindow : Form
     {
-        public Form1()
+        public BalieWindow()
         {
             InitializeComponent();
         }
