@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/GelreAirport/v14
+/GelreAirport/bin
+/GelreAirport/obj/Debug
+/GelreAirport/obj/Release
