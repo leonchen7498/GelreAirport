@@ -94,7 +94,7 @@
             this.MaximizeBox = false;
             this.Name = "ZoekenPassagierWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ZoekenPassagierWindow";
+            this.Text = "Gelre Airport";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
