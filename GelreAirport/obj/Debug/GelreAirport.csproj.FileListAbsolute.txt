@@ -1,2 +1,9 @@
 c:\users\leon\documents\visual studio 2015\Projects\GelreAirport\GelreAirport\bin\Debug\GelreAirport.exe.config
 C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\bin\Debug\GelreAirport.exe.config
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\bin\Debug\GelreAirport.exe
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\bin\Debug\GelreAirport.pdb
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csprojResolveAssemblyReference.cache
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.Properties.Resources.resources
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csproj.GenerateResource.Cache
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.exe
+C:\Users\leon\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.pdb
