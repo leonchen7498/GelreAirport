@@ -16,5 +16,10 @@ namespace GelreAirport.View
         {
             InitializeComponent();
         }
+
+        private void DetailedPassagierVluchtWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

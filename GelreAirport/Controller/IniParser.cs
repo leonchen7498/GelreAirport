@@ -5,13 +5,13 @@ using System.IO;
 
 namespace GelreAirport.Controller
 {
-    class IniParser
+    internal class IniParser
     {
         private readonly FileIniDataParser _parser = new FileIniDataParser();
         private readonly IniData _data;
-        private readonly String _fileName = null;
+        private readonly string _fileName = null;
 
-        public IniParser(String file)
+        public IniParser(string file)
         {
             if (!File.Exists(file))
             {
@@ -21,18 +21,16 @@ namespace GelreAirport.Controller
             this._data = this._parser.ReadFile(file);
         }
 
-        public String GetValue(String section, String key)
+        public string GetValue(string section, string key)
         {
             return this._data[section][key];
         }
 
-        public void SetValue(String section, String key, String value)
+        public void SetValue(string section, string key, string value)
         {
-            if (this._fileName != null)
-            {
-                this._data[section][key] = value;
-                this._parser.WriteFile(this._fileName, this._data);
-            }
+            if (this._fileName == null) return;
+            this._data[section][key] = value;
+            this._parser.WriteFile(this._fileName, this._data);
         }
     }
 }

@@ -215,6 +215,7 @@
             this.Name = "DetailedPassagierVluchtWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelre Airport";
+            this.Load += new System.EventHandler(this.DetailedPassagierVluchtWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bagageDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vluchtenDataGrid)).EndInit();
             this.ResumeLayout(false);

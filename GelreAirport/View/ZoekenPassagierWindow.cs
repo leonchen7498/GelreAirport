@@ -5,7 +5,7 @@ namespace GelreAirport.View
 {
     public partial class ZoekenPassagierWindow : Form
     {
-        private Balie _balie;
+        private readonly Balie _balie;
 
         public ZoekenPassagierWindow(Balie balie)
         {

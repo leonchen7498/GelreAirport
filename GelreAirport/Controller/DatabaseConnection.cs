@@ -7,7 +7,7 @@ namespace GelreAirport.Controller
     class DatabaseConnection
     {
         private readonly IniParser _ini = new IniParser("database.ini");
-        private SqlConnection mySqlConnection;
+        private readonly SqlConnection _mySqlConnection;
 
         public DatabaseConnection()
         {
@@ -16,7 +16,7 @@ namespace GelreAirport.Controller
             String user = this._ini.GetValue("database", "user");
             String password = this._ini.GetValue("database", "password");
 
-            this.mySqlConnection = new SqlConnection("user id=" + user + ";" +
+            this._mySqlConnection = new SqlConnection("user id=" + user + ";" +
                                                            "password=" + password + ";" +
                                                            "server=" + server + ";" +
                                                            "Trusted_Connection=yes;" +
@@ -27,7 +27,7 @@ namespace GelreAirport.Controller
 
         public SqlConnection GetConnection()
         {
-            return this.mySqlConnection;
+            return this._mySqlConnection;
         }
 
         public Boolean IsConnected()

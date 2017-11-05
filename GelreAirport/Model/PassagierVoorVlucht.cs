@@ -6,46 +6,25 @@ using System.Threading.Tasks;
 
 namespace GelreAirport.Model
 {
-    class PassagierVoorVlucht
+    public class PassagierVoorVlucht
     {
-        private int passagiernummer;
-        private int vluchtnummer;
-        private int balienummer;
-        private DateTime inchecktijdstip;
-        private string stoel;
+        public int Passagiernummer { get; }
 
-        public int Passagiernummer
-        {
-            get { return passagiernummer; }
-        }
+        public int Vluchtnummer { get; }
 
-        public int Vluchtnummer
-        {
-            get { return vluchtnummer; }
-        }
+        public Balie Balienummer { get; }
 
-        public int Balienummer
-        {
-            get { return balienummer; }
-        }
+        public DateTime Inchecktijdstip { get; }
 
-        public DateTime Inchecktijdstip
-        {
-            get { return inchecktijdstip; }
-        }
+        public string Stoel { get; }
 
-        public string Stoel
+        public PassagierVoorVlucht(int passagiernummer, int vluchtnummer, Balie balienummer, DateTime inchecktijdstip, string stoel)
         {
-            get { return stoel; }
-        }
-
-        public PassagierVoorVlucht(int passagiernummer, int vluchtnummer, int balienummer, DateTime inchecktijdstip, string stoel)
-        {
-            this.passagiernummer = passagiernummer;
-            this.vluchtnummer = vluchtnummer;
-            this.balienummer = balienummer;
-            this.inchecktijdstip = inchecktijdstip;
-            this.stoel = stoel;
+            this.Passagiernummer = passagiernummer;
+            this.Vluchtnummer = vluchtnummer;
+            this.Balienummer = balienummer;
+            this.Inchecktijdstip = inchecktijdstip;
+            this.Stoel = stoel;
         }
     }
 }
