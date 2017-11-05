@@ -1,25 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using GelreAirport.Model;
 
-namespace GelreAirport
+namespace GelreAirport.View
 {
     public partial class ZoekenPassagierWindow : Form
     {
-        public ZoekenPassagierWindow()
+        private Balie _balie;
+
+        public ZoekenPassagierWindow(Balie balie)
         {
             InitializeComponent();
+            this._balie = balie;
+            MessageBox.Show($@"Balie {this._balie.Balienummer}");
         }
 
         private void ZoekenPassagierWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ZoekenPassagierWindow_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

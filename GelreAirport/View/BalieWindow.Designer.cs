@@ -1,4 +1,4 @@
-﻿namespace GelreAirport
+﻿namespace GelreAirport.View
 {
     partial class BalieWindow
     {

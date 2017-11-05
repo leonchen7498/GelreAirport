@@ -1,4 +1,4 @@
-﻿namespace GelreAirport
+﻿namespace GelreAirport.View
 {
     partial class ZoekenPassagierWindow
     {
@@ -97,6 +97,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelre Airport";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ZoekenPassagierWindow_FormClosed);
+            this.Load += new System.EventHandler(this.ZoekenPassagierWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.zoekResultaatDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace GelreAirport.Model
 {
-    class Balie
+    public class Balie
     {
-        private int balienummer;
-
-        public int Balienummer
-        {
-            get { return balienummer; }
-        }
+        public int Balienummer { get; set; }
 
         public Balie(int balienummer)
         {
-            this.balienummer = balienummer;
+            this.Balienummer = balienummer;
+        }
+
+        public override string ToString()
+        {
+            return "Balie " + this.Balienummer;
         }
     }
 }

@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using GelreAirport.Controller;
+using GelreAirport.Model;
 
-namespace GelreAirport
+namespace GelreAirport.View
 {
     public partial class BalieWindow : Form
     {
+        private DatabaseConnection _db;
         public BalieWindow()
         {
             InitializeComponent();
@@ -19,10 +15,14 @@ namespace GelreAirport
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this._db = new DatabaseConnection();
+            this._db.GetConnection().Open();
+            MessageBox.Show(_db.IsConnected() ? "Connected!" : "Not connected!");
+
             this.CenterToScreen();
-            baliesListBox.Items.Add("Balie A");
-            baliesListBox.Items.Add("Balie B");
-            baliesListBox.Items.Add("Balie C");
+            baliesListBox.Items.Add(new Balie(1));
+            baliesListBox.Items.Add(new Balie(2));
+            baliesListBox.Items.Add(new Balie(3));
         }
 
         private void OkBtn_Click(object sender, EventArgs e)
@@ -30,12 +30,12 @@ namespace GelreAirport
             if (baliesListBox.SelectedIndex >= 0)
             {
                 this.Hide();
-                ZoekenPassagierWindow window = new ZoekenPassagierWindow();
+                var window = new ZoekenPassagierWindow((Balie)this.baliesListBox.SelectedItem);
                 window.Show();
             }
             else
             {
-                MessageBox.Show("Selecteer aub een balie.", "Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(@"Selecteer aub een balie.", @"Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 
             }
         }

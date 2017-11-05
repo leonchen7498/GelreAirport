@@ -9,6 +9,8 @@ C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csp
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.csproj.CoreCompileInputs.cache
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.exe
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.pdb
-C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.ZoekenPassagierWindow.resources
-C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.BalieWindow.resources
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.View.DetailedPassagierVluchtWindow.resources
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.View.BalieWindow.resources
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.View.ZoekenPassagierWindow.resources
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\INIFileParser.dll
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\INIFileParser.xml
