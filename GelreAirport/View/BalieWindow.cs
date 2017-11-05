@@ -20,14 +20,14 @@ namespace GelreAirport
         private void Form1_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            lbBalies.Items.Add("Balie A");
-            lbBalies.Items.Add("Balie B");
-            lbBalies.Items.Add("Balie C");
+            baliesListBox.Items.Add("Balie A");
+            baliesListBox.Items.Add("Balie B");
+            baliesListBox.Items.Add("Balie C");
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void OkBtn_Click(object sender, EventArgs e)
         {
-            if (lbBalies.SelectedIndex >= 0)
+            if (baliesListBox.SelectedIndex >= 0)
             {
                 this.Hide();
                 ZoekenPassagierWindow window = new ZoekenPassagierWindow();

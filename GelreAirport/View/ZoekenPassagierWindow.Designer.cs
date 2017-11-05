@@ -30,9 +30,9 @@
         {
             this.zoekTerm = new System.Windows.Forms.TextBox();
             this.zoekOptie = new System.Windows.Forms.ComboBox();
-            this.ZoekenBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.zoekenBtn = new System.Windows.Forms.Button();
+            this.zoekResultaatDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.zoekResultaatDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // zoekTerm
@@ -59,44 +59,45 @@
             this.zoekOptie.Size = new System.Drawing.Size(150, 28);
             this.zoekOptie.TabIndex = 1;
             // 
-            // ZoekenBtn
+            // zoekenBtn
             // 
-            this.ZoekenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoekenBtn.Location = new System.Drawing.Point(354, 12);
-            this.ZoekenBtn.Name = "ZoekenBtn";
-            this.ZoekenBtn.Size = new System.Drawing.Size(318, 28);
-            this.ZoekenBtn.TabIndex = 5;
-            this.ZoekenBtn.Text = "Zoeken";
-            this.ZoekenBtn.UseVisualStyleBackColor = true;
+            this.zoekenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoekenBtn.Location = new System.Drawing.Point(354, 12);
+            this.zoekenBtn.Name = "zoekenBtn";
+            this.zoekenBtn.Size = new System.Drawing.Size(318, 28);
+            this.zoekenBtn.TabIndex = 5;
+            this.zoekenBtn.Text = "Zoeken";
+            this.zoekenBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // zoekResultaatDataGrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(660, 403);
-            this.dataGridView1.TabIndex = 6;
+            this.zoekResultaatDataGrid.AllowUserToAddRows = false;
+            this.zoekResultaatDataGrid.AllowUserToDeleteRows = false;
+            this.zoekResultaatDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.zoekResultaatDataGrid.Location = new System.Drawing.Point(12, 46);
+            this.zoekResultaatDataGrid.Name = "zoekResultaatDataGrid";
+            this.zoekResultaatDataGrid.ReadOnly = true;
+            this.zoekResultaatDataGrid.RowHeadersVisible = false;
+            this.zoekResultaatDataGrid.Size = new System.Drawing.Size(660, 403);
+            this.zoekResultaatDataGrid.TabIndex = 6;
             // 
             // ZoekenPassagierWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.ZoekenBtn);
+            this.Controls.Add(this.zoekResultaatDataGrid);
+            this.Controls.Add(this.zoekenBtn);
             this.Controls.Add(this.zoekOptie);
             this.Controls.Add(this.zoekTerm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ZoekenPassagierWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelre Airport";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ZoekenPassagierWindow_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zoekResultaatDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +107,7 @@
 
         private System.Windows.Forms.TextBox zoekTerm;
         private System.Windows.Forms.ComboBox zoekOptie;
-        private System.Windows.Forms.Button ZoekenBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button zoekenBtn;
+        private System.Windows.Forms.DataGridView zoekResultaatDataGrid;
     }
 }

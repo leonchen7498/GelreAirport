@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.okBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbBalies = new System.Windows.Forms.ListBox();
+            this.baliesListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // btnConfirm
+            // okBtn
             // 
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(389, 312);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(113, 46);
-            this.btnConfirm.TabIndex = 1;
-            this.btnConfirm.Text = "Ok";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.okBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.okBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.okBtn.Location = new System.Drawing.Point(389, 312);
+            this.okBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.okBtn.Name = "okBtn";
+            this.okBtn.Size = new System.Drawing.Size(113, 46);
+            this.okBtn.TabIndex = 1;
+            this.okBtn.Text = "Ok";
+            this.okBtn.UseVisualStyleBackColor = false;
+            this.okBtn.Click += new System.EventHandler(this.OkBtn_Click);
             // 
             // label1
             // 
@@ -57,29 +57,31 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Selecteer uw balie.";
             // 
-            // lbBalies
+            // baliesListBox
             // 
-            this.lbBalies.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBalies.FormattingEnabled = true;
-            this.lbBalies.ItemHeight = 37;
-            this.lbBalies.Location = new System.Drawing.Point(9, 42);
-            this.lbBalies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lbBalies.Name = "lbBalies";
-            this.lbBalies.Size = new System.Drawing.Size(494, 263);
-            this.lbBalies.TabIndex = 3;
+            this.baliesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baliesListBox.FormattingEnabled = true;
+            this.baliesListBox.ItemHeight = 37;
+            this.baliesListBox.Location = new System.Drawing.Point(9, 42);
+            this.baliesListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.baliesListBox.Name = "baliesListBox";
+            this.baliesListBox.Size = new System.Drawing.Size(494, 263);
+            this.baliesListBox.TabIndex = 3;
             // 
             // BalieWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 368);
-            this.Controls.Add(this.lbBalies);
+            this.Controls.Add(this.baliesListBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.okBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BalieWindow";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelre Airport";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -89,9 +91,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button okBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lbBalies;
+        private System.Windows.Forms.ListBox baliesListBox;
     }
 }
 
