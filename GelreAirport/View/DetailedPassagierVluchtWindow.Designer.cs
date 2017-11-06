@@ -49,9 +49,16 @@
             // 
             // bagageDataGrid
             // 
+            this.bagageDataGrid.AllowUserToAddRows = false;
+            this.bagageDataGrid.AllowUserToDeleteRows = false;
+            this.bagageDataGrid.AllowUserToResizeColumns = false;
+            this.bagageDataGrid.AllowUserToResizeRows = false;
             this.bagageDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bagageDataGrid.Location = new System.Drawing.Point(12, 324);
+            this.bagageDataGrid.MultiSelect = false;
             this.bagageDataGrid.Name = "bagageDataGrid";
+            this.bagageDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.bagageDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bagageDataGrid.Size = new System.Drawing.Size(561, 125);
             this.bagageDataGrid.TabIndex = 0;
             // 
@@ -143,9 +150,16 @@
             // 
             // vluchtenDataGrid
             // 
+            this.vluchtenDataGrid.AllowUserToAddRows = false;
+            this.vluchtenDataGrid.AllowUserToDeleteRows = false;
+            this.vluchtenDataGrid.AllowUserToResizeColumns = false;
+            this.vluchtenDataGrid.AllowUserToResizeRows = false;
             this.vluchtenDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vluchtenDataGrid.Location = new System.Drawing.Point(12, 143);
             this.vluchtenDataGrid.Name = "vluchtenDataGrid";
+            this.vluchtenDataGrid.RowHeadersVisible = false;
+            this.vluchtenDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.vluchtenDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.vluchtenDataGrid.Size = new System.Drawing.Size(561, 147);
             this.vluchtenDataGrid.TabIndex = 10;
             // 
@@ -158,6 +172,7 @@
             this.toevoegenBagageBtn.TabIndex = 11;
             this.toevoegenBagageBtn.Text = "Toevoegen";
             this.toevoegenBagageBtn.UseVisualStyleBackColor = true;
+            this.toevoegenBagageBtn.Click += new System.EventHandler(this.toevoegenBagageBtn_Click);
             // 
             // verwijderenBagageBtn
             // 
@@ -168,6 +183,7 @@
             this.verwijderenBagageBtn.TabIndex = 12;
             this.verwijderenBagageBtn.Text = "Verwijderen";
             this.verwijderenBagageBtn.UseVisualStyleBackColor = true;
+            this.verwijderenBagageBtn.Click += new System.EventHandler(this.verwijderenBagageBtn_Click);
             // 
             // opslaanBtn
             // 
@@ -178,6 +194,7 @@
             this.opslaanBtn.TabIndex = 13;
             this.opslaanBtn.Text = "Opslaan";
             this.opslaanBtn.UseVisualStyleBackColor = true;
+            this.opslaanBtn.Click += new System.EventHandler(this.opslaanBtn_Click);
             // 
             // label6
             // 

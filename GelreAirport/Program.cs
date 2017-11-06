@@ -17,7 +17,7 @@ namespace GelreAirport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BalieWindow());
+            Application.Run(new DetailedPassagierVluchtWindow());
         }
     }
 }

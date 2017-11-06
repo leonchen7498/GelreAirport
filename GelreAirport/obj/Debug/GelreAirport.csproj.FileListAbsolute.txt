@@ -14,3 +14,4 @@ C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.Vie
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.View.ZoekenPassagierWindow.resources
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\INIFileParser.dll
 C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\bin\Debug\INIFileParser.xml
+C:\Users\ugure\Source\Repos\GelreAirport\GelreAirport\obj\Debug\GelreAirport.View.VoegBagageToeDialog.resources

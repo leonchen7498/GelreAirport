@@ -70,6 +70,12 @@
     <Compile Include="View\DetailedPassagierVluchtWindow.Designer.cs">
       <DependentUpon>DetailedPassagierVluchtWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VoegBagageToeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VoegBagageToeDialog.Designer.cs">
+      <DependentUpon>VoegBagageToeDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ZoekenPassagierWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="View\DetailedPassagierVluchtWindow.resx">
       <DependentUpon>DetailedPassagierVluchtWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VoegBagageToeDialog.resx">
+      <DependentUpon>VoegBagageToeDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ZoekenPassagierWindow.resx">
       <DependentUpon>ZoekenPassagierWindow.cs</DependentUpon>
