@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using GelreAirport.Controller;
 using GelreAirport.Model;
@@ -16,16 +18,30 @@ namespace GelreAirport.View
         private void Form1_Load(object sender, EventArgs e)
         {
             this._db = new DatabaseConnection();
-            this._db.GetConnection().Open();
-            MessageBox.Show(_db.IsConnected() ? "Connected!" : "Not connected!");
 
-            this.CenterToScreen();
-            baliesListBox.Items.Add(new Balie(1));
-            baliesListBox.Items.Add(new Balie(2));
-            baliesListBox.Items.Add(new Balie(3));
+            using (this._db.GetConnection())
+            {
+                this._db.GetConnection().Open();
+                SqlDataReader reader;
+
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = this._db.GetConnection();
+                    command.CommandText = "SELECT * FROM Balie";
+                    command.CommandType = CommandType.Text;
+
+                    reader = command.ExecuteReader();
+                }
+
+                while (reader.Read())
+                {
+                    baliesListBox.Items.Add(new Balie((int)reader["balienummer"]));
+                }
+                reader.Close();
+            }
         }
 
-        private void OkBtn_Click(object sender, EventArgs e)
+        private void baliesListBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (baliesListBox.SelectedIndex >= 0)
             {
@@ -36,7 +52,6 @@ namespace GelreAirport.View
             else
             {
                 MessageBox.Show(@"Selecteer aub een balie.", @"Melding", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                
             }
         }
     }
