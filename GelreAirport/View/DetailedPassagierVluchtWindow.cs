@@ -31,13 +31,11 @@ namespace GelreAirport.View
 
         private void toevoegenBagageBtn_Click(object sender, EventArgs e)
         {
-            VoegBagageToeDialog dlg = new VoegBagageToeDialog();
-            
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                var result = dlg.Gewicht;
-                MessageBox.Show(result);
-            }
+            var dlg = new VoegBagageToeDialog();
+
+            if (dlg.ShowDialog() != DialogResult.OK) return;
+            var result = dlg.Gewicht;
+            MessageBox.Show(result);
         }
 
         private void verwijderenBagageBtn_Click(object sender, EventArgs e)

@@ -23,5 +23,11 @@ namespace GelreAirport.Model
             this.Geslacht = geslacht;
             this.Geboortedatum = geboortedatum;
         }
+
+        public override string ToString()
+        {
+            return
+                $"Nr: {this.Nummer} | Naam: {this.Naam} | Geslacht: {this.Geslacht} | Geboortedatum: {this.Geboortedatum}";
+        }
     }
 }
