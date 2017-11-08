@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bagageDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,29 +37,12 @@
             this.geslachtTextBox = new System.Windows.Forms.TextBox();
             this.geboortedatumTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.vluchtenDataGrid = new System.Windows.Forms.DataGridView();
             this.toevoegenBagageBtn = new System.Windows.Forms.Button();
             this.verwijderenBagageBtn = new System.Windows.Forms.Button();
-            this.opslaanBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bagageDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vluchtenDataGrid)).BeginInit();
+            this.lbGeboekteVluchten = new System.Windows.Forms.ListBox();
+            this.lbIngecheckteBagage = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // bagageDataGrid
-            // 
-            this.bagageDataGrid.AllowUserToAddRows = false;
-            this.bagageDataGrid.AllowUserToDeleteRows = false;
-            this.bagageDataGrid.AllowUserToResizeColumns = false;
-            this.bagageDataGrid.AllowUserToResizeRows = false;
-            this.bagageDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bagageDataGrid.Location = new System.Drawing.Point(12, 324);
-            this.bagageDataGrid.MultiSelect = false;
-            this.bagageDataGrid.Name = "bagageDataGrid";
-            this.bagageDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.bagageDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bagageDataGrid.Size = new System.Drawing.Size(561, 125);
-            this.bagageDataGrid.TabIndex = 0;
             // 
             // label1
             // 
@@ -135,38 +117,23 @@
             this.geboortedatumTextBox.Location = new System.Drawing.Point(415, 44);
             this.geboortedatumTextBox.Name = "geboortedatumTextBox";
             this.geboortedatumTextBox.ReadOnly = true;
-            this.geboortedatumTextBox.Size = new System.Drawing.Size(158, 26);
+            this.geboortedatumTextBox.Size = new System.Drawing.Size(229, 26);
             this.geboortedatumTextBox.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 301);
+            this.label5.Location = new System.Drawing.Point(7, 284);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(228, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Reeds ingecheckte bagage";
             // 
-            // vluchtenDataGrid
-            // 
-            this.vluchtenDataGrid.AllowUserToAddRows = false;
-            this.vluchtenDataGrid.AllowUserToDeleteRows = false;
-            this.vluchtenDataGrid.AllowUserToResizeColumns = false;
-            this.vluchtenDataGrid.AllowUserToResizeRows = false;
-            this.vluchtenDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vluchtenDataGrid.Location = new System.Drawing.Point(12, 143);
-            this.vluchtenDataGrid.Name = "vluchtenDataGrid";
-            this.vluchtenDataGrid.RowHeadersVisible = false;
-            this.vluchtenDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.vluchtenDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.vluchtenDataGrid.Size = new System.Drawing.Size(561, 147);
-            this.vluchtenDataGrid.TabIndex = 10;
-            // 
             // toevoegenBagageBtn
             // 
             this.toevoegenBagageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toevoegenBagageBtn.Location = new System.Drawing.Point(12, 456);
+            this.toevoegenBagageBtn.Location = new System.Drawing.Point(11, 437);
             this.toevoegenBagageBtn.Name = "toevoegenBagageBtn";
             this.toevoegenBagageBtn.Size = new System.Drawing.Size(136, 36);
             this.toevoegenBagageBtn.TabIndex = 11;
@@ -177,7 +144,7 @@
             // verwijderenBagageBtn
             // 
             this.verwijderenBagageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verwijderenBagageBtn.Location = new System.Drawing.Point(154, 456);
+            this.verwijderenBagageBtn.Location = new System.Drawing.Point(154, 437);
             this.verwijderenBagageBtn.Name = "verwijderenBagageBtn";
             this.verwijderenBagageBtn.Size = new System.Drawing.Size(136, 36);
             this.verwijderenBagageBtn.TabIndex = 12;
@@ -185,37 +152,49 @@
             this.verwijderenBagageBtn.UseVisualStyleBackColor = true;
             this.verwijderenBagageBtn.Click += new System.EventHandler(this.verwijderenBagageBtn_Click);
             // 
-            // opslaanBtn
-            // 
-            this.opslaanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opslaanBtn.Location = new System.Drawing.Point(437, 456);
-            this.opslaanBtn.Name = "opslaanBtn";
-            this.opslaanBtn.Size = new System.Drawing.Size(136, 36);
-            this.opslaanBtn.TabIndex = 13;
-            this.opslaanBtn.Text = "Opslaan";
-            this.opslaanBtn.UseVisualStyleBackColor = true;
-            this.opslaanBtn.Click += new System.EventHandler(this.opslaanBtn_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 120);
+            this.label6.Location = new System.Drawing.Point(7, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "Geboekte vluchten";
             // 
+            // lbGeboekteVluchten
+            // 
+            this.lbGeboekteVluchten.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGeboekteVluchten.FormattingEnabled = true;
+            this.lbGeboekteVluchten.HorizontalScrollbar = true;
+            this.lbGeboekteVluchten.ItemHeight = 24;
+            this.lbGeboekteVluchten.Location = new System.Drawing.Point(11, 105);
+            this.lbGeboekteVluchten.Name = "lbGeboekteVluchten";
+            this.lbGeboekteVluchten.Size = new System.Drawing.Size(628, 172);
+            this.lbGeboekteVluchten.TabIndex = 15;
+            this.lbGeboekteVluchten.SelectedIndexChanged += new System.EventHandler(this.lbGeboekteVluchten_SelectedIndexChanged);
+            // 
+            // lbIngecheckteBagage
+            // 
+            this.lbIngecheckteBagage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIngecheckteBagage.FormattingEnabled = true;
+            this.lbIngecheckteBagage.HorizontalScrollbar = true;
+            this.lbIngecheckteBagage.ItemHeight = 24;
+            this.lbIngecheckteBagage.Location = new System.Drawing.Point(11, 307);
+            this.lbIngecheckteBagage.Name = "lbIngecheckteBagage";
+            this.lbIngecheckteBagage.Size = new System.Drawing.Size(628, 124);
+            this.lbIngecheckteBagage.TabIndex = 16;
+            // 
             // DetailedPassagierVluchtWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 504);
+            this.ClientSize = new System.Drawing.Size(656, 482);
+            this.Controls.Add(this.lbIngecheckteBagage);
+            this.Controls.Add(this.lbGeboekteVluchten);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.opslaanBtn);
             this.Controls.Add(this.verwijderenBagageBtn);
             this.Controls.Add(this.toevoegenBagageBtn);
-            this.Controls.Add(this.vluchtenDataGrid);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.geboortedatumTextBox);
             this.Controls.Add(this.geslachtTextBox);
@@ -225,7 +204,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bagageDataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -233,16 +211,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelre Airport";
             this.Load += new System.EventHandler(this.DetailedPassagierVluchtWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bagageDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vluchtenDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView bagageDataGrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -252,10 +226,10 @@
         private System.Windows.Forms.TextBox geslachtTextBox;
         private System.Windows.Forms.TextBox geboortedatumTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView vluchtenDataGrid;
         private System.Windows.Forms.Button toevoegenBagageBtn;
         private System.Windows.Forms.Button verwijderenBagageBtn;
-        private System.Windows.Forms.Button opslaanBtn;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox lbGeboekteVluchten;
+        private System.Windows.Forms.ListBox lbIngecheckteBagage;
     }
 }

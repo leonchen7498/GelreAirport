@@ -37,27 +37,28 @@ namespace GelreAirport.View
                         using (_db.GetConnection())
                         {
                             _db.GetConnection().Open();
-                            SqlDataReader reader;
 
                             using (var command = new SqlCommand())
                             {
+                                
                                 command.Connection = _db.GetConnection();
                                 command.CommandText =
                                     $@"SELECT * FROM Passagier WHERE naam LIKE '%{zoekTerm.Text}%'";
                                 command.CommandType = CommandType.Text;
 
-                                reader = command.ExecuteReader();
+                                using (var reader = command.ExecuteReader())
+                                {
+                                    while (reader.Read())
+                                    {
+                                        var passagier = new Passagier(
+                                            Convert.ToInt32(reader["passagiernummer"]),
+                                            Convert.ToString(reader["naam"]),
+                                            Convert.ToChar(reader["geslacht"]),
+                                            Convert.ToDateTime(reader["geboortedatum"]));
+                                        lbPassagiers.Items.Add(passagier);
+                                    }
+                                }
                             }
-
-                            while (reader.Read())
-                            {
-                                var passagier = new Passagier(Convert.ToInt32(reader["passagiernummer"]),
-                                    Convert.ToString(reader["naam"]),
-                                    Convert.ToChar(reader["geslacht"]),
-                                    Convert.ToDateTime(reader["geboortedatum"]));
-                                lbPassagiers.Items.Add(passagier);
-                            }
-                            reader.Close();
                         }
                         break;
 
@@ -65,28 +66,31 @@ namespace GelreAirport.View
                         using (_db.GetConnection())
                         {
                             _db.GetConnection().Open();
-                            SqlDataReader reader;
 
                             using (var command = new SqlCommand())
                             {
                                 command.Connection = _db.GetConnection();
+                                command.Parameters.AddWithValue("@zoekTerm", zoekTerm.Text);
                                 command.CommandText =
-                                    $@"SELECT P.passagiernummer, P.naam, P.geslacht, P.geboortedatum FROM Passagier AS P INNER JOIN PassagierVoorVlucht PV ON P.passagiernummer = PV.passagiernummer
-    WHERE PV.vluchtnummer = '{zoekTerm.Text}'";
+                                    $@"SELECT P.passagiernummer, P.naam, P.geslacht, P.geboortedatum 
+                                    FROM Passagier AS P INNER JOIN PassagierVoorVlucht PV ON 
+                                    P.passagiernummer = PV.passagiernummer
+                                    WHERE PV.vluchtnummer = {zoekTerm.Text}";
                                 command.CommandType = CommandType.Text;
 
-                                reader = command.ExecuteReader();
-                            }
+                                using (var reader = command.ExecuteReader())
+                                {
 
-                            while (reader.Read())
-                            {
-                                var passagier = new Passagier(Convert.ToInt32(reader["passagiernummer"]),
-                                    Convert.ToString(reader["naam"]),
-                                    Convert.ToChar(reader["geslacht"]),
-                                    Convert.ToDateTime(reader["geboortedatum"]));
-                                lbPassagiers.Items.Add(passagier);
+                                    while (reader.Read())
+                                    {
+                                        var passagier = new Passagier(Convert.ToInt32(reader["passagiernummer"]),
+                                            Convert.ToString(reader["naam"]),
+                                            Convert.ToChar(reader["geslacht"]),
+                                            Convert.ToDateTime(reader["geboortedatum"]));
+                                        lbPassagiers.Items.Add(passagier);
+                                    }
+                                }
                             }
-                            reader.Close();
                         }
                         break;
                     case "Bestemming":

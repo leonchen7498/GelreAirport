@@ -22,7 +22,6 @@ namespace GelreAirport.View
             using (this._db.GetConnection())
             {
                 this._db.GetConnection().Open();
-                SqlDataReader reader;
 
                 using (var command = new SqlCommand())
                 {
@@ -30,14 +29,14 @@ namespace GelreAirport.View
                     command.CommandText = "SELECT * FROM Balie";
                     command.CommandType = CommandType.Text;
 
-                    reader = command.ExecuteReader();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            baliesListBox.Items.Add(new Balie((int)reader["balienummer"]));
+                        }
+                    }
                 }
-
-                while (reader.Read())
-                {
-                    baliesListBox.Items.Add(new Balie((int)reader["balienummer"]));
-                }
-                reader.Close();
             }
         }
 

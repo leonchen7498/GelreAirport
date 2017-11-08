@@ -23,5 +23,10 @@ namespace GelreAirport.Model
             this.Vluchtnummer = vluchtnummer;
             this.Gewicht = gewicht;
         }
+
+        public override string ToString()
+        {
+            return "Volgnummer: " + Volgnummer + " | Passagiernummer: " + Passagiernummer + " | Vluchtnummer: " + Vluchtnummer + " | Gewicht: " + Gewicht;
+        }
     }
 }

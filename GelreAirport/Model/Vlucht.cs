@@ -22,13 +22,13 @@ namespace GelreAirport.Model
 
         public int MaxTotaalgewicht { get; }
 
-        public int MaxPpgewicht { get; }
+        public decimal MaxPpgewicht { get; }
 
         public DateTime VertrekTijdstip { get; }
 
         public DateTime AankomstTijdstip { get; }
 
-        public Vlucht(int vluchtnummer, char gatecode, string maatschappijcode, string luchthavencode, string vliegtuigType, int maxAantalPsgrs, int maxTotaalgewicht, int maxPpgewicht, DateTime vertrekTijdstip, DateTime aankomstTijdstip)
+        public Vlucht(int vluchtnummer, char gatecode, string maatschappijcode, string luchthavencode, string vliegtuigType, int maxAantalPsgrs, int maxTotaalgewicht, decimal maxPpgewicht, DateTime vertrekTijdstip, DateTime aankomstTijdstip)
         {
             this.Vluchtnummer = vluchtnummer;
             this.Gatecode = gatecode;
@@ -40,6 +40,13 @@ namespace GelreAirport.Model
             MaxPpgewicht = maxPpgewicht;
             this.VertrekTijdstip = vertrekTijdstip;
             this.AankomstTijdstip = aankomstTijdstip;
+        }
+
+        public override string ToString()
+        {
+            return "Nr: " + Vluchtnummer + " | Gatecode: " + Gatecode + " | Maatschappij code: " + Maatschappijcode
+                   + " | Luchthavencode: " + Luchthavencode + " | Vliegtuige type: " + VliegtuigType + " | Vertrek: " +
+                   VertrekTijdstip.ToLongDateString() + " | Aankomst: " + AankomstTijdstip.ToLongDateString();
         }
     }
 }

@@ -32,8 +32,8 @@
             this.zoekTerm = new System.Windows.Forms.TextBox();
             this.zoekOptie = new System.Windows.Forms.ComboBox();
             this.zoekenBtn = new System.Windows.Forms.Button();
-            this.passagierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbPassagiers = new System.Windows.Forms.ListBox();
+            this.passagierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.passagierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,10 +72,6 @@
             this.zoekenBtn.UseVisualStyleBackColor = true;
             this.zoekenBtn.Click += new System.EventHandler(this.zoekenBtn_Click);
             // 
-            // passagierBindingSource
-            // 
-            this.passagierBindingSource.DataSource = typeof(GelreAirport.Model.Passagier);
-            // 
             // lbPassagiers
             // 
             this.lbPassagiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +82,10 @@
             this.lbPassagiers.Size = new System.Drawing.Size(660, 412);
             this.lbPassagiers.TabIndex = 8;
             this.lbPassagiers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbPassagiers_MouseDoubleClick);
+            // 
+            // passagierBindingSource
+            // 
+            this.passagierBindingSource.DataSource = typeof(GelreAirport.Model.Passagier);
             // 
             // ZoekenPassagierWindow
             // 

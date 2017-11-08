@@ -12,16 +12,27 @@ namespace GelreAirport.View
 {
     public partial class VoegBagageToeDialog : Form
     {
-        public string Gewicht = null;
+        public int Gewicht = 0;
+        public int Vluchtnummer = 0;
 
-        public VoegBagageToeDialog()
+        public VoegBagageToeDialog(int vluchtnummer)
         {
             InitializeComponent();
+            this.Vluchtnummer = vluchtnummer;
         }
 
         private void opslaanBtn_Click(object sender, EventArgs e)
         {
-            this.Gewicht = this.gewichtTextBox.Text;
+            if (int.TryParse(this.gewichtTextBox.Text, out var value))
+            {
+                this.Gewicht = value;
+            }
+            else
+            {
+                MessageBox.Show(@"Rond het gewicht af a.u.b.", @"Incorrect gewicht", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.Retry;
+            }
         }
     }
 }
