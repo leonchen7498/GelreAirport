@@ -26,7 +26,8 @@ namespace GelreAirport.Model
 
         public override string ToString()
         {
-            return "Volgnummer: " + Volgnummer + " | Passagiernummer: " + Passagiernummer + " | Vluchtnummer: " + Vluchtnummer + " | Gewicht: " + Gewicht;
+            return
+                $"Volgnummer: {Volgnummer} | Passagiernummer: {Passagiernummer} | Vluchtnummer: {Vluchtnummer} | Gewicht: {Gewicht}";
         }
     }
 }

@@ -44,9 +44,8 @@ namespace GelreAirport.Model
 
         public override string ToString()
         {
-            return "Nr: " + Vluchtnummer + " | Gatecode: " + Gatecode + " | Maatschappij code: " + Maatschappijcode
-                   + " | Luchthavencode: " + Luchthavencode + " | Vliegtuige type: " + VliegtuigType + " | Vertrek: " +
-                   VertrekTijdstip.ToLongDateString() + " | Aankomst: " + AankomstTijdstip.ToLongDateString();
+            return 
+                $"Nr: {Vluchtnummer} | Gatecode: {Gatecode} | Maatschappij code: {Maatschappijcode} | Luchthavencode: {Luchthavencode} | Vliegtuige type: {VliegtuigType} | Vertrek: {VertrekTijdstip.ToLongDateString()} | Aankomst: {AankomstTijdstip.ToLongDateString()}";
         }
     }
 }
