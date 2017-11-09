@@ -89,6 +89,7 @@
             // 
             // ZoekenPassagierWindow
             // 
+            this.AcceptButton = this.zoekenBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 470);
@@ -103,6 +104,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelre Airport";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ZoekenPassagierWindow_FormClosed);
+            this.Load += new System.EventHandler(this.ZoekenPassagierWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.passagierBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

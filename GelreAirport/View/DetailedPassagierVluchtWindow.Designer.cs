@@ -42,6 +42,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbGeboekteVluchten = new System.Windows.Forms.ListBox();
             this.lbIngecheckteBagage = new System.Windows.Forms.ListBox();
+            this.btnInchecken = new System.Windows.Forms.Button();
+            this.stoelnrTextBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -124,7 +128,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 284);
+            this.label5.Location = new System.Drawing.Point(7, 318);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(228, 20);
             this.label5.TabIndex = 9;
@@ -133,7 +137,7 @@
             // toevoegenBagageBtn
             // 
             this.toevoegenBagageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toevoegenBagageBtn.Location = new System.Drawing.Point(11, 437);
+            this.toevoegenBagageBtn.Location = new System.Drawing.Point(11, 471);
             this.toevoegenBagageBtn.Name = "toevoegenBagageBtn";
             this.toevoegenBagageBtn.Size = new System.Drawing.Size(136, 36);
             this.toevoegenBagageBtn.TabIndex = 11;
@@ -144,7 +148,7 @@
             // verwijderenBagageBtn
             // 
             this.verwijderenBagageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verwijderenBagageBtn.Location = new System.Drawing.Point(154, 437);
+            this.verwijderenBagageBtn.Location = new System.Drawing.Point(154, 471);
             this.verwijderenBagageBtn.Name = "verwijderenBagageBtn";
             this.verwijderenBagageBtn.Size = new System.Drawing.Size(136, 36);
             this.verwijderenBagageBtn.TabIndex = 12;
@@ -156,7 +160,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 82);
+            this.label6.Location = new System.Drawing.Point(7, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 20);
             this.label6.TabIndex = 14;
@@ -168,9 +172,9 @@
             this.lbGeboekteVluchten.FormattingEnabled = true;
             this.lbGeboekteVluchten.HorizontalScrollbar = true;
             this.lbGeboekteVluchten.ItemHeight = 24;
-            this.lbGeboekteVluchten.Location = new System.Drawing.Point(11, 105);
+            this.lbGeboekteVluchten.Location = new System.Drawing.Point(11, 139);
             this.lbGeboekteVluchten.Name = "lbGeboekteVluchten";
-            this.lbGeboekteVluchten.Size = new System.Drawing.Size(628, 172);
+            this.lbGeboekteVluchten.Size = new System.Drawing.Size(633, 172);
             this.lbGeboekteVluchten.TabIndex = 15;
             this.lbGeboekteVluchten.SelectedIndexChanged += new System.EventHandler(this.lbGeboekteVluchten_SelectedIndexChanged);
             // 
@@ -180,16 +184,61 @@
             this.lbIngecheckteBagage.FormattingEnabled = true;
             this.lbIngecheckteBagage.HorizontalScrollbar = true;
             this.lbIngecheckteBagage.ItemHeight = 24;
-            this.lbIngecheckteBagage.Location = new System.Drawing.Point(11, 307);
+            this.lbIngecheckteBagage.Location = new System.Drawing.Point(11, 341);
             this.lbIngecheckteBagage.Name = "lbIngecheckteBagage";
-            this.lbIngecheckteBagage.Size = new System.Drawing.Size(628, 124);
+            this.lbIngecheckteBagage.Size = new System.Drawing.Size(633, 124);
             this.lbIngecheckteBagage.TabIndex = 16;
+            // 
+            // btnInchecken
+            // 
+            this.btnInchecken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInchecken.Location = new System.Drawing.Point(482, 83);
+            this.btnInchecken.Name = "btnInchecken";
+            this.btnInchecken.Size = new System.Drawing.Size(162, 35);
+            this.btnInchecken.TabIndex = 17;
+            this.btnInchecken.Text = "Inchecken";
+            this.btnInchecken.UseVisualStyleBackColor = true;
+            this.btnInchecken.Click += new System.EventHandler(this.btnInchecken_Click);
+            // 
+            // stoelnrTextBox
+            // 
+            this.stoelnrTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stoelnrTextBox.Location = new System.Drawing.Point(154, 87);
+            this.stoelnrTextBox.Name = "stoelnrTextBox";
+            this.stoelnrTextBox.Size = new System.Drawing.Size(111, 26);
+            this.stoelnrTextBox.TabIndex = 18;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(271, 87);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(205, 26);
+            this.dateTimePicker1.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(40, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Stoelnummer:";
             // 
             // DetailedPassagierVluchtWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 482);
+            this.ClientSize = new System.Drawing.Size(656, 519);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.stoelnrTextBox);
+            this.Controls.Add(this.btnInchecken);
             this.Controls.Add(this.lbIngecheckteBagage);
             this.Controls.Add(this.lbGeboekteVluchten);
             this.Controls.Add(this.label6);
@@ -231,5 +280,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox lbGeboekteVluchten;
         private System.Windows.Forms.ListBox lbIngecheckteBagage;
+        private System.Windows.Forms.Button btnInchecken;
+        private System.Windows.Forms.TextBox stoelnrTextBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label8;
     }
 }

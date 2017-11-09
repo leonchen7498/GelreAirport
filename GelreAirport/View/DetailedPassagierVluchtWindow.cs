@@ -16,11 +16,13 @@ namespace GelreAirport.View
     public partial class DetailedPassagierVluchtWindow : Form
     {
         private readonly Passagier _passagier;
+        private readonly Balie _balie;
 
-        public DetailedPassagierVluchtWindow(Passagier passagier)
+        public DetailedPassagierVluchtWindow(Passagier passagier, Balie balie)
         {
             InitializeComponent();
             this._passagier = passagier;
+            this._balie = balie;
         }
 
         private void DetailedPassagierVluchtWindow_Load(object sender, EventArgs e)
@@ -196,6 +198,52 @@ namespace GelreAirport.View
         {
             if (lbGeboekteVluchten.SelectedItem is Vlucht selectedItem)
                 LoadAllBagagesFromFlight(selectedItem.Vluchtnummer);
+        }
+
+        private void btnInchecken_Click(object sender, EventArgs e)
+        {
+            if (!(lbGeboekteVluchten.SelectedItem is Vlucht selectedItem))
+            {
+                MessageBox.Show(@"Selecteer een vlucht waar u deze passagier wilt inchecken.", @"Vlucht kiezen",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var passagierVoorVlucht = new PassagierVoorVlucht(_passagier.Nummer, selectedItem.Vluchtnummer, _balie, this.dateTimePicker1.Value, this.stoelnrTextBox.Text);
+
+            var db = new DatabaseConnection();
+
+            try
+            {
+                using (db.GetConnection())
+                {
+                    db.GetConnection().Open();
+
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = db.GetConnection();
+                        command.Parameters.AddWithValue("@Passagiernummer", passagierVoorVlucht.Passagiernummer);
+                        command.Parameters.AddWithValue("@Vluchtnummer", passagierVoorVlucht.Vluchtnummer);
+                        command.Parameters.AddWithValue("@Balie", passagierVoorVlucht.Balienummer.Balienummer);
+                        command.Parameters.AddWithValue("@Incheck", passagierVoorVlucht.Inchecktijdstip);
+                        command.Parameters.AddWithValue("@StoelNr", passagierVoorVlucht.Stoel);
+                        command.CommandText =
+                            @"EXEC spIncheckenPassagierVoorVlucht @Passagiernummer, @Vluchtnummer, @Balie, @Incheck, @StoelNr";
+                        command.CommandType = CommandType.Text;
+
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show(
+                            $@"U heeft passagier {_passagier.Naam} inchecked op vlucht nummer {
+                                    passagierVoorVlucht.Vluchtnummer
+                                }.", @"Passagier inchecken", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
